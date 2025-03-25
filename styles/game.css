@@ -1,0 +1,125 @@
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    background-color: #000;
+    font-family: 'Courier New', monospace;
+}
+
+canvas { 
+    display: block; 
+}
+
+#info {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    color: #0ff;
+    z-index: 100;
+    font-size: 18px;
+}
+
+#score {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    color: #0ff;
+    z-index: 100;
+    font-size: 24px;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f00;
+    font-size: 36px;
+    text-shadow: 0 0 10px #f00;
+    text-align: center;
+    display: none;
+    z-index: 200;
+}
+
+#startScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: 
+        linear-gradient(45deg, #000 25%, transparent 25%),
+        linear-gradient(-45deg, #000 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #000 75%),
+        linear-gradient(-45deg, transparent 75%, #000 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    color: #0ff;
+}
+
+#startScreen h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #0ff,
+                 0 0 20px #0ff,
+                 0 0 30px #0ff;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+#startScreen p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+#startScreen p:hover {
+    opacity: 1;
+}
+
+#startButton {
+    padding: 20px 40px;
+    font-size: 28px;
+    background-color: transparent;
+    color: #0ff;
+    border: 2px solid #0ff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px #0ff;
+    margin-top: 30px;
+}
+
+#startButton:hover {
+    background-color: #0ff;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0ff,
+                0 0 40px #0ff;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #0ff,
+                     0 0 20px #0ff,
+                     0 0 30px #0ff;
+    }
+    to {
+        text-shadow: 0 0 20px #0ff,
+                     0 0 30px #0ff,
+                     0 0 40px #0ff,
+                     0 0 50px #0ff;
+    }
+}

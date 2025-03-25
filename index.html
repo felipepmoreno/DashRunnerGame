@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Dash: Datascape Runner</title>
+    <link rel="stylesheet" href="styles/game.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>NEON DASH</h1>
+        <p>DATASCAPE RUNNER v1.0</p>
+        <p>← → ou A/D para navegar entre trilhas</p>
+        <p>ESPAÇO para executar salto</p>
+        <p>Evite colisões. Sobreviva. Maximize sua pontuação.</p>
+        <button id="startButton">INICIAR PROGRAMA</button>
+    </div>
+    <div id="info">NEON DASH: DATASCAPE RUNNER</div>
+    <div id="score">SCORE: 0</div>
+    <div id="gameOver">
+        ERRO FATAL: PROGRAMA ELIMINADO<br>
+        <span style="font-size: 24px; color: #0ff;">Clique para reiniciar</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/track.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
